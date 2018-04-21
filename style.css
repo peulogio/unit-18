@@ -1,0 +1,152 @@
+/* style sheet for piaprofile unit 20 */
+
+container:before,
+.container:after {
+    content: "";
+    display: table;
+}
+
+.container:after {
+    clear: both;
+}
+
+.imageHolder{
+    margin-top:2%;
+    float:left;
+    width:50%;   
+    position:relative;
+}
+    
+.profilePic{
+    width:100%;
+    float:left;
+    position:relative;
+    transition:all 0.5s ease;
+    -webkit-transition:all 0.5s ease;
+    -webkit-box-shadow: 0px 0px 21px -1px   rgba(71,71,71,1);
+    -moz-box-shadow: 0px 0px 21px -1px rgba(71,71,71,1);
+    box-shadow: 0px 0px 21px -1px rgba(71,71,71,1); 
+ }  
+    
+h1{
+    float:right;
+    font-family: 'Fjalla One', sans-serif;
+    color:#D10606;
+    position:absolute;
+    width:48%;
+     padding:0px 0px 0px 44%;
+    margin-top:.25%;
+    font-size:14vw;
+    letter-spacing:1vw;
+    z-index:10000;
+    font-weight:400;
+    text-transform:uppercase;
+    transition:all .5s ease;
+     -webkit-transition:all .5s ease;
+}   
+    
+      
+    :hover h1{
+        transform: translateX(-46.5vw);
+      }
+      
+    :hover .profilePic{
+            -webkit-filter: grayscale(100%); 
+            filter: grayscale(100%);
+            transform:scale(1.2);
+          }
+    :hover .imageHolder:after{
+          opacity:1;
+          animation-play-state: running;
+          
+        }
+.aboutMe{
+    width:45%;
+    float:right;
+    right:1%;
+    position:absolute;
+    overflow-x:hidden;
+}
+.contactInfo{
+    margin-top: 4%;
+}
+
+h2, h3, h4{
+    color:#D10606;
+}
+
+h2, h3, h4, h5{
+    font-family: 'Fjalla One', sans-serif;
+}       
+
+h4{
+    font-size:100%;
+}
+
+h5{
+    font-size: 80%;
+}
+
+h2.special{
+    font-family: 'Fjalla One', sans-serif;
+    letter-spacing:3px;
+    margin:2% 2%;
+    float:left;
+    width:100%;
+    transform: translateX(102%); 
+    transition:all .5s ease;
+    -webkit-transition:all .5s ease;
+}
+
+p{
+    font-family: 'Roboto Slab', serif;
+}
+
+p.special{
+    font-family: 'Roboto Slab', serif;
+    float:left;
+    margin:0% 2%;
+    /* width:100%; */
+    transform: translateX(102%); 
+    transition:all .62s ease;
+    -webkit-transition:all .62s ease;
+}
+          
+          
+:hover .aboutMe h2, :hover .aboutMe p.special {
+        transform: translateX(0%);     
+    }
+    
+ul {
+    list-style-type: none;
+    padding-left: 0px;
+     } 
+
+.card-body .text-secondary{
+    padding: .8rem;
+}
+
+
+@media (min-width: 576px) {
+    .card-columns {
+        column-count: 1;
+    }
+}
+
+@media (min-width: 768px) {
+    .card-columns {
+        column-count: 2;
+    }
+}
+
+/* @media (min-width: 992px) {
+    .card-columns {
+        column-count: 4;
+    }
+}
+
+@media (min-width: 1200px) {
+    .card-columns {
+        column-count: 5;
+    }
+} */
